@@ -6,12 +6,12 @@
 -->
 <html>
 	<head>
-		<title>Sarah Kane | Astronomy &amp; Advocacy</title>
+		<title>Sarah G. Kane | Astronomy</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta
 			name="description"
-			content="Sarah Kane is an astronomer at the University of Cambridge working in Galactic archaeology, data-driven spectroscopy, and chemically peculiar stars."
+			content="Sarah Kane is an astronomy PhD student at the University of Cambridge working in Galactic archaeology, data-driven spectroscopy, and chemically peculiar stars."
 		/>
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -49,8 +49,7 @@
 				margin-top: 2rem;
 			}
 
-			.topic-grid,
-			.outreach-grid {
+			.topic-grid {
 				display: grid;
 				gap: 1.5rem;
 				grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
@@ -68,7 +67,6 @@
 
 			.topic-card h3,
 			.publication-item h3,
-			.outreach-grid h3,
 			.advocacy-card h3,
 			.cv-card h3 {
 				margin-bottom: 0.6rem;
@@ -76,7 +74,6 @@
 
 			.topic-card p,
 			.publication-item p,
-			.outreach-grid p,
 			.advocacy-card p,
 			.cv-card p {
 				margin-bottom: 0;
@@ -96,27 +93,109 @@
 				text-transform: uppercase;
 			}
 
-			.outreach-grid section {
-				background: rgba(255, 255, 255, 0.08);
-				border: 1px solid rgba(255, 255, 255, 0.16);
-				border-radius: 0.5rem;
-				padding: 1.75rem;
+			.publication-authors {
+				line-height: 1.6;
 			}
 
-			.outreach-grid ul,
+			.author-note {
+				display: block;
+				font-size: 0.9rem;
+				margin-top: 0.4rem;
+			}
+
+			.publication-abstract {
+				border-top: 1px solid rgba(255, 255, 255, 0.16);
+				margin-top: 1.25rem;
+				padding-top: 1rem;
+			}
+
+			.publication-abstract summary {
+				color: #ffffff;
+				cursor: pointer;
+				font-weight: bold;
+			}
+
+			.publication-abstract[open] summary {
+				margin-bottom: 0.75rem;
+			}
+
+			.publication-abstract summary:focus-visible {
+				outline: 2px solid #ffffff;
+				outline-offset: 0.35rem;
+			}
+
+			.advocacy-topics {
+				display: grid;
+				gap: 1.5rem;
+				grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+			}
+
 			.advocacy-card ul {
 				margin: 0;
 				padding-left: 1.25rem;
 			}
 
-			.outreach-grid li,
+			.advocacy-card p + ul {
+				margin-top: 1.25rem;
+			}
+
+			.advocacy-card .resource-link {
+				margin-top: 1.25rem;
+			}
+
+			.advocacy-card .resource-link + p {
+				margin-top: 0.75rem;
+			}
+
 			.advocacy-card li {
 				margin-bottom: 0.75rem;
 			}
 
-			.outreach-grid li:last-child,
 			.advocacy-card li:last-child {
 				margin-bottom: 0;
+			}
+
+			.outreach-video {
+				margin-top: 2.5rem;
+			}
+
+			.outreach-video h3 {
+				margin-bottom: 0.6rem;
+			}
+
+			.outreach-video p {
+				margin-bottom: 1.25rem;
+			}
+
+			.video-frame {
+				aspect-ratio: 16 / 9;
+				border-radius: 0.35rem;
+				overflow: hidden;
+			}
+
+			.video-frame iframe {
+				border: 0;
+				display: block;
+				height: 100%;
+				width: 100%;
+			}
+
+			.advocacy-photo {
+				margin: 1.5rem auto;
+				max-width: 52rem;
+			}
+
+			.advocacy-photo img {
+				border: 1px solid rgba(255, 255, 255, 0.16);
+				border-radius: 0.5rem;
+				box-shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.2);
+				display: block;
+				width: 100%;
+			}
+
+			.advocacy-photo figcaption {
+				font-size: 0.9rem;
+				margin-top: 0.75rem;
 			}
 
 			.cv-actions {
@@ -124,6 +203,26 @@
 				flex-wrap: wrap;
 				gap: 0.75rem;
 				margin-top: 1.5rem;
+			}
+
+			.cv-layout {
+				align-items: center;
+				display: grid;
+				gap: 2rem;
+				grid-template-columns: minmax(0, 1fr) minmax(14rem, 26rem);
+			}
+
+			.site-ending-photo {
+				margin: 0;
+				max-width: 26rem;
+			}
+
+			.site-ending-photo img {
+				border: 1px solid rgba(255, 255, 255, 0.16);
+				border-radius: 0.5rem;
+				box-shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.2);
+				display: block;
+				width: 100%;
 			}
 
 			@media screen and (max-width: 980px) {
@@ -135,6 +234,14 @@
 				.hero-photo {
 					margin: 0 auto;
 					max-width: 22rem;
+				}
+
+				.cv-layout {
+					grid-template-columns: 1fr;
+				}
+
+				.site-ending-photo {
+					margin: 0 auto;
 				}
 			}
 		</style>
@@ -165,21 +272,28 @@
 						<div class="inner">
 							<div class="hero-layout">
 								<div class="hero-copy">
-									<h1>Sarah Kane</h1>
-									<p>Astrophysicist, Marshall Scholar, and disability advocate.</p>
+									<h1>Sarah G. Kane</h1>
 									<p>
-										I am a PhD student in Astronomy at the University of Cambridge and Trinity
-										College. My work sits at the intersection of Galactic archaeology,
-										data-driven spectroscopy, and the study of chemically peculiar stars as tracers
-										of the Milky Way's formation history.
+										I am a third year PhD student at the Institute of Astronomy at the University
+										of Cambridge, where I am supervised by Vasily Belokurov and Stephanie Monty.
+										My research interests broadly lie in the field of stellar spectroscopy and
+										Galactic archeology. I am originally from the US, and prior to beginning my
+										PhD at Cambridge, I completed my Bachelor&rsquo;s degree at the University of
+										Pennsylvania.
 									</p>
 									<p>
-										Beyond research, I care deeply about making science more accessible through
-										mentorship, public engagement, and disability and albinism advocacy.
+										As a legally blind astronomer, I am also passionate about inclusivity in science
+										and disability advocacy. If you are also interested in these topics or are a
+										disabled scientist or student, please do reach out!
+									</p>
+									<p>
+										Outside of work, I enjoy spending time with my dog, Elana, rollerblading,
+										playing <a href="https://paralympics.org.uk/sports/goalball" target="_blank" rel="noreferrer">goalball</a>
+										(blind sport), and reading science fiction and fantasy novels.
 									</p>
 								</div>
 								<figure class="hero-photo">
-									<img src="images/sarah-headshot.jpeg" alt="Portrait of Sarah Kane outdoors." />
+									<img src="images/sarah-headshot.jpeg" alt="Sarah Kane smiling outdoors in a wooded setting." />
 								</figure>
 							</div>
 							<div class="quick-links">
@@ -196,31 +310,37 @@
 						<div class="inner">
 							<h2>Research</h2>
 							<p>
-								My research uses stellar chemistry and spectroscopy to reconstruct how the
-								Milky Way formed, evolved, and was enriched over cosmic time.
+								My research uses stellar spectroscopy and chemical compositions to understand how the
+								Milky Way evolved and was enriched over cosmic time.
 							</p>
 							<div class="topic-grid">
 								<article class="topic-card">
-									<h3>Galactic Archaeology</h3>
+									<h3>Globular Clusters</h3>
 									<p>
-										I use stars as fossil records of the early Galaxy, tracing globular cluster
-										debris, disk evolution, and the assembly history of the Milky Way.
+										Globular clsuters are groups of thousands to millions of densely-packed
+										stars and are hypothesized to be important building blocks for the early
+										Galaxy.
+										I am especially interested in stars with chemistry consistent with having
+										formed in a globular cluster that have "escaped" their birth cluster into
+										the Milky Way field. Such stars are invaluable tracers of disrupted and
+										dissolved star clusters.
 									</p>
 								</article>
 								<article class="topic-card">
 									<h3>Data-Driven Spectroscopy</h3>
 									<p>
-										I build machine-learning tools for large stellar surveys including Gaia and
+										I build machine learning tools for large stellar surveys including Gaia and
 										GALAH, using spectra to infer abundances, classifications, and rare stellar
-										populations at scale.
+										populations in an era of large astronomical surveys.
 									</p>
 								</article>
 								<article class="topic-card">
 									<h3>Chemically Peculiar Stars</h3>
 									<p>
-										I study unusual stars, including globular cluster-origin field stars and
-										europium-enhanced stars, to probe rare enrichment pathways and hidden
-										channels of Galactic evolution.
+										"The stranger, the better!" I am interested in the Galaxy's strangest stars
+										and what they can tell us about unique formation enviroments and enrichment
+										sources. Recently, I have been especially interested in metal-rich europium-enhanced
+										stars and what they can tell us about the rapid neutron capture process.
 									</p>
 								</article>
 							</div>
@@ -231,39 +351,100 @@
 					<section id="publications" class="wrapper style3 fade-up">
 						<div class="inner">
 							<h2>Publications</h2>
-							<p>Selected publications and preprints spanning Galactic archaeology, stellar spectroscopy, and accessible astronomy.</p>
+							<p>First-author and co-first-author publications, listed most recent first.</p>
 							<div class="publication-list">
 								<article class="publication-item">
-									<span class="publication-meta">2024</span>
-									<h3><a href="https://arxiv.org/abs/2409.00197">The ones that got away: chemical tagging of globular cluster-origin stars with Gaia BP/RP spectra</a></h3>
-									<p>
-										First-author work identifying chemically unusual globular cluster-origin stars
-										with a neural network trained on Gaia low-resolution spectra.
+									<span class="publication-meta">2026</span>
+									<h3><a href="https://doi.org/10.1093/mnras/stag209">A value-added catalogue of neural network-based europium abundances for GALAH DR4</a></h3>
+									<p class="publication-authors">
+										<strong>Sarah G. Kane</strong><sup>*</sup>, Zofia Kaczmarek<sup>*</sup>,
+										Andrew Garner, Sven Buder, and Stephanie Monty
+										<span class="author-note"><sup>*</sup>These authors contributed equally.</span>
 									</p>
+									<details class="publication-abstract">
+										<summary>Abstract</summary>
+										<p>
+											Europium traces rare nucleosynthetic events such as neutron-star mergers,
+											but GALAH DR4 reports less precise europium measurements than earlier
+											releases. We train a convolutional neural network to transfer GALAH DR3
+											[Eu/H] labels onto DR4 spectra and publish predictions for 118,946 stars,
+											including a high-confidence sample of 54,068 giants. We supplement the
+											catalogue with synthesis-based abundances for metal-poor stars. Combined
+											with GALAH DR3, the results provide more than 100,000 vetted abundances on
+											a consistent scale and recover established trends in Galactic chemical
+											evolution.
+										</p>
+									</details>
+								</article>
+								<article class="publication-item">
+									<span class="publication-meta">2026</span>
+									<h3><a href="https://doi.org/10.1093/mnras/staf2272">On the connection between nitrogen-enhanced field stars and the Galactic globular clusters</a></h3>
+									<p class="publication-authors">
+										<strong>Sarah G. Kane</strong>, Vasily Belokurov, Stephanie Monty,
+										Holger Baumgardt, Carrie Filion, Andrey Kravtsov, GyuChul Myeong,
+										and HanYuan Zhang
+									</p>
+									<details class="publication-abstract">
+										<summary>Abstract</summary>
+										<p>
+											Nitrogen-enhanced field stars preserve chemical evidence of globular
+											cluster origins after escaping their birth environments. We compare their
+											integrals of motion and metallicities with those of surviving clusters and
+											chemically typical halo stars. Relative to the full halo, these stars are
+											more strongly associated with initially massive clusters in the inner
+											Galaxy. That excess largely disappears when the comparison sample is
+											matched in orbital energy, suggesting that many low-energy inner-halo stars
+											may share cluster origins. Dynamical friction and the Galactic bar further
+											limit reliable present-day star-to-cluster associations.
+										</p>
+									</details>
 								</article>
 								<article class="publication-item">
 									<span class="publication-meta">2025</span>
-									<h3><a href="https://arxiv.org/abs/2512.02125">A value-added catalogue of neural network-based europium abundances for GALAH DR4</a></h3>
-									<p>
-										First-author catalogue paper producing large-scale, vetted europium abundances
-										to study rare r-process enrichment across the Galaxy.
+									<h3><a href="https://doi.org/10.1093/mnras/stae2689">The ones that got away: chemical tagging of globular cluster-origin stars with Gaia BP/RP spectra</a></h3>
+									<p class="publication-authors">
+										<strong>Sarah G. Kane</strong>, Vasily Belokurov, Miles Cranmer,
+										Stephanie Monty, Hanyuan Zhang, and Anke Ardern-Arentsen
 									</p>
+									<details class="publication-abstract">
+										<summary>Abstract</summary>
+										<p>
+											Stars with unusually high nitrogen and aluminium abundances can trace
+											globular clusters even after those stars enter the Galactic field. We train
+											a neural network on low-resolution Gaia BP/RP spectra to identify this rare
+											chemical signature. The classifier reaches approximately 99 per cent
+											accuracy with a false-positive rate near 7 per cent and identifies 878 new
+											candidates. Validation tests show that candidates occur more frequently in
+											clusters than in the field. Most lie in the inner Galaxy, while their field
+											frequency declines near [Fe/H] = -1, around the completion of Galactic
+											disc spin-up.
+										</p>
+									</details>
 								</article>
 								<article class="publication-item">
 									<span class="publication-meta">2024</span>
-									<h3><a href="https://arxiv.org/abs/2410.11077">Predicting metallicities and carbon abundances from Gaia XP spectra for (carbon-enhanced) metal-poor stars</a></h3>
-									<p>
-										Collaborative work applying neural networks to Gaia XP spectra to uncover
-										metal-poor and carbon-enhanced stellar populations.
+									<h3><a href="https://doi.org/10.3389/fcomm.2024.1288896">A Universe of Sound: Processing NASA Data into Sonifications to Explore Participant Response</a></h3>
+									<p class="publication-authors">
+										Kimberly K. Arcand<sup>*</sup>, Jessica S. Schonhut-Stasik<sup>*</sup>,
+										<strong>Sarah G. Kane</strong><sup>*</sup>, Gwynn Sturdevant<sup>*</sup>,
+										Matt Russo, Megan Watzke, Brian Hsu, and Lisa F. Smith
+										<span class="author-note"><sup>*</sup>These authors contributed equally.</span>
 									</p>
-								</article>
-								<article class="publication-item">
-									<span class="publication-meta">2024</span>
-									<h3><a href="https://arxiv.org/abs/2403.18082">A Universe of Sound: Processing NASA Data into Sonifications to Explore Participant Response</a></h3>
-									<p>
-										A study of how sonified astronomy data can improve access, engagement, and
-										trust for blind, low-vision, and sighted audiences.
-									</p>
+									<details class="publication-abstract">
+										<summary>Abstract</summary>
+										<p>
+											Astronomy communication has historically prioritized visual presentation,
+											limiting access for blind and low-vision audiences and overlooking other
+											ways of understanding scientific information. We presented sonifications of
+											three NASA astronomical objects to blind, low-vision, and sighted
+											participants, then surveyed responses related to learning, enjoyment, and
+											trust. Across 3,184 participants, both audience groups reported learning
+											gains and positive experiences. The findings indicate that multisensory
+											astronomy can expand access, strengthen engagement with scientific data, and
+											increase awareness of accessibility among both sighted and blind or
+											low-vision communities.
+										</p>
+									</details>
 								</article>
 							</div>
 						</div>
@@ -274,35 +455,31 @@
 						<div class="inner">
 							<h2>Outreach</h2>
 							<p>
-								I care about making astronomy welcoming, rigorous, and reachable for students
-								at many different stages.
+								I love sharing astronomy with public audiences through talks and events that make current
+								research engaging and approachable. Recent work includes public lectures at Cambridge
+								on europium, white dwarfs, and the sonification of astronomical data, a presentation
+								at Pint of Science in Cambridge, and educational talks for visiting school groups at
+								the Institute of Astronomy.
 							</p>
-							<div class="outreach-grid">
-								<section>
-									<h3>Mentorship &amp; Teaching</h3>
-									<ul>
-										<li>Supervised a Part III Astrophysics student at the University of Cambridge.</li>
-										<li>Mentored four high school summer students through research projects.</li>
-										<li>Guest lectured in introductory astronomy and co-instructed computing and data science courses.</li>
-									</ul>
-								</section>
-								<section>
-									<h3>Student Support</h3>
-									<ul>
-										<li>Served as a Research Peer Advisor, helping undergraduates find and prepare for research positions.</li>
-										<li>Worked as a Moelis Access Science Fellow supporting science enrichment programs for Philadelphia students.</li>
-										<li>Led programming and conversations about access to research for students with disabilities.</li>
-									</ul>
-								</section>
-								<section>
-									<h3>Public Engagement</h3>
-									<ul>
-										<li>Organized a physics and astronomy field trip for students from the Overbrook School for the Blind.</li>
-										<li>Hosted NOAH Connections sessions for people with albinism pursuing careers in STEM.</li>
-										<li>Contributed to accessible astronomy communication through sonification and public-facing science events.</li>
-									</ul>
-								</section>
-							</div>
+							<section class="outreach-video">
+								<h3>Are White Dwarfs Stars? A Debate</h3>
+								<p>
+									In 2024, a heated debate arose at the Institute of Astronomy: are white dwarfs stars?
+									Fellow PhD student Katherine Kauma and I settled the question via the only possible route--a
+									public debate and vote at one of the Institute's stargazing evenings. You can view a recording
+									of our debate below!
+								</p>
+								<div class="video-frame">
+									<iframe
+										src="https://www.youtube-nocookie.com/embed/LxxapSS4y5E"
+										title="White dwarfs outreach talk by Sarah Kane and Katherine Kauma"
+										loading="lazy"
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+										referrerpolicy="strict-origin-when-cross-origin"
+										allowfullscreen
+									></iframe>
+								</div>
+							</section>
 						</div>
 					</section>
 
@@ -310,18 +487,77 @@
 					<section id="advocacy" class="wrapper style2 fade-up">
 						<div class="inner">
 							<h2>Advocacy</h2>
+							<div class="advocacy-topics">
+								<div class="advocacy-card">
+									<h3>Science Accessibility</h3>
+									<p>
+										There are many straightforward steps we can take to make science more inclusive to people
+										with disabilities, from including alternative (alt) text for figures in papers to designing
+										conferences with accesibility in mind. Included below is a talk I gave at the Institute of
+										Astronomy on these topics, where you can find more details.
+									</p>
+									<p class="resource-link">
+										<a href="assets/docs/Accessibility-in-Astronomy.pdf" target="_blank" rel="noreferrer">
+											View accessibility talk slides: Accessibility in Astronomy (PDF)
+										</a>
+									</p>
+									<p>
+										I co-instructed the
+										<a href="https://iota-school.github.io/nonvisual_data_science_workshops/" target="_blank" rel="noreferrer">Nonvisual Data Science Workshop Series</a>,
+										a five-part introduction to Python, pandas, nonvisual data exploration,
+										and sonification designed for blind and low-vision learners. Recordings,
+										transcripts, and curriculum materials are available on the course website.
+									</p>
+								</div>
+								<div class="advocacy-card">
+									<h3>Sonification</h3>
+									<p>
+										Sonification is the representation of data as sound and is directly
+										analogous to data visualization. A famous and long-used example of
+										sonification is the Geiger counter, which clicks to report the amount of
+										ionizing radiation present.
+										I research data sonification as a tool for scientific communication,
+										education, and inclusion. It has long been my belief that sonification is
+										engaging and enjoyable for both sighted and blind/low-vision audiences.
+										Included below are a few articles in the press about sonification.
+									</p>
+									<ul>
+										<li>
+											<a href="https://www.technologyreview.com/2023/06/19/1074049/universe-sonification/" target="_blank" rel="noreferrer">How sounds can turn us on to the wonders of the universe</a>
+											- MIT Technology Review
+										</li>
+										<li>
+											<a href="https://www.scientificamerican.com/article/audio-astronomy-unlocks-a-universe-of-sound/" target="_blank" rel="noreferrer">Audio Astronomy Unlocks a Universe of Sound</a>
+											- Scientific American
+										</li>
+									</ul>
+								</div>
+							</div>
+							<figure class="advocacy-photo">
+								<img
+									src="images/albinism-advocates-un-geneva.jpeg"
+									alt="Sarah Kane with fellow albinism advocates on the Avenue of Flags outside the United Nations Office at Geneva."
+								/>
+								<figcaption>Albinism advocates outside the United Nations Office at Geneva.</figcaption>
+							</figure>
 							<div class="advocacy-card">
-								<h3>Disability &amp; Albinism Advocacy</h3>
+								<h3>Albinism Advocacy</h3>
 								<p>
-									As a legally blind astronomer with albinism, I advocate for more accessible
-									science and for the rights, dignity, and visibility of people with albinism.
+									<a href="https://albinism.org/about-albinism/" target="_blank" rel="noreferrer">Albinism</a>
+									is a rare genetic condition that causes a lack of pigmentation in the eyes and typically
+									the skin and hair. It is usually associated with some degree of visual impairment. Some types of albinism,
+									particularly Hermansky-Pudlak Syndrom, are associated with additional health complications.
 								</p>
-								<ul>
-									<li>I work on accessible astronomy, including research on data sonification as a tool for scientific communication and inclusion.</li>
-									<li>I have hosted community-building STEM conversations for people with albinism through the National Organization for Albinism and Hypopigmentation.</li>
-									<li>In 2026, I delivered statements to the United Nations Human Rights Council on employment rights and protections for people with albinism and Hermansky-Pudlak syndrome.</li>
-									<li>I have also received training from the UN Office of the High Commissioner for Human Rights on engaging with international human rights mechanisms.</li>
-								</ul>
+								<p>
+
+								</p>
+								<p>
+									Around the world, people with albinism face a range of human rights challenges.
+									I have been to the United Nations in Geneva three times to represent the <a href="https://albinism.org" target="_blank" rel="noreferrer">National Organization of Albinism and Hypopigmentation (NOAH)</a>
+									and the <a href="https://www.hpsnetwork.org" target="_blank" rel="noreferrer">Hermanksy-Pudlak Syndrome (HPS) Network</a>. You can watch my statements to the UN Human Rights Council, made on behalf of
+									NOAH and/or the HPS Network, on <a href="https://webtv.un.org/en/asset/k1a/k1aib5oyyg?kalturaStartTime=9185" target="_blank" rel="noreferrer">the UN web archive</a>. Outside of global advocacy, I am a lifelong member of NOAH and have also enjoyed connecting with the
+									<a href="https://www.albinism.org.uk" target="_blank" rel="noreferrer">Albinism Fellowship of the UK and Ireland</a> since moving to Cambridge.
+								</p>
 							</div>
 						</div>
 					</section>
@@ -330,16 +566,20 @@
 					<section id="cv" class="wrapper style3 fade-up">
 						<div class="inner">
 							<h2>CV</h2>
-							<div class="cv-card">
-								<h3>Curriculum Vitae</h3>
-								<p>
-									My CV includes education, research experience, awards, outreach, advocacy, and
-									technical skills.
-								</p>
-								<div class="cv-actions">
-									<a href="assets/docs/Sarah_Kane_CV.pdf" class="button primary" target="_blank" rel="noreferrer">Open CV</a>
-									<a href="assets/docs/Sarah_Kane_CV.pdf" class="button" download>Download PDF</a>
+							<div class="cv-layout">
+								<div class="cv-card">
+									<h3>Curriculum Vitae</h3>
+									<div class="cv-actions">
+										<a href="assets/docs/Sarah_Kane_CV.pdf" class="button primary" target="_blank" rel="noreferrer">Open CV</a>
+										<a href="assets/docs/Sarah_Kane_CV.pdf" class="button" download>Download PDF</a>
+									</div>
 								</div>
+								<figure class="site-ending-photo">
+									<img
+										src="images/guide-dog-historical-telescope.jpeg"
+										alt="A yellow Labrador and golden retriever cross guide dog sitting next to a historical telescope. In the background are shelves of books."
+									/>
+								</figure>
 							</div>
 						</div>
 					</section>
