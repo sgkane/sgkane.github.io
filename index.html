@@ -183,6 +183,12 @@
 				grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
 			}
 
+			.albinism-layout {
+				display: grid;
+				gap: 1.5rem;
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+			}
+
 			.advocacy-card ul {
 				margin: 0;
 				padding-left: 1.25rem;
@@ -192,11 +198,19 @@
 				margin-top: 1.25rem;
 			}
 
+			.advocacy-card p + p {
+				margin-top: 0.75rem;
+			}
+
 			.advocacy-card .resource-link {
 				margin-top: 1.25rem;
 			}
 
 			.advocacy-card .resource-link + p {
+				margin-top: 0.75rem;
+			}
+
+			.advocacy-card .video-fallback {
 				margin-top: 0.75rem;
 			}
 
@@ -290,6 +304,10 @@
 				}
 
 				.cv-layout {
+					grid-template-columns: 1fr;
+				}
+
+				.albinism-layout {
 					grid-template-columns: 1fr;
 				}
 
@@ -593,24 +611,45 @@
 								/>
 								<figcaption>Albinism advocates outside the United Nations Office at Geneva.</figcaption>
 							</figure>
-							<div class="advocacy-card">
-								<h3>Albinism Advocacy</h3>
-								<p>
-									<a href="https://albinism.org/about-albinism/" target="_blank" rel="noreferrer">Albinism</a>
-									is a rare genetic condition that causes a lack of pigmentation in the eyes and typically
-									the skin and hair. It is usually associated with some degree of visual impairment. Some types of albinism,
-									particularly Hermansky-Pudlak Syndrom, are associated with additional health complications.
-								</p>
-								<p>
-
-								</p>
-								<p>
-									Around the world, people with albinism face a range of human rights challenges.
-									I have been to the United Nations in Geneva three times to represent the <a href="https://albinism.org" target="_blank" rel="noreferrer">National Organization of Albinism and Hypopigmentation (NOAH)</a>
-									and the <a href="https://www.hpsnetwork.org" target="_blank" rel="noreferrer">Hermanksy-Pudlak Syndrome (HPS) Network</a>. You can watch my statements to the UN Human Rights Council, made on behalf of
-									NOAH and/or the HPS Network, on <a href="https://webtv.un.org/en/asset/k1a/k1aib5oyyg?kalturaStartTime=9185" target="_blank" rel="noreferrer">the UN web archive</a>. Outside of global advocacy, I am a lifelong member of NOAH and have also enjoyed connecting with the
-									<a href="https://www.albinism.org.uk" target="_blank" rel="noreferrer">Albinism Fellowship of the UK and Ireland</a> since moving to Cambridge.
-								</p>
+							<div class="albinism-layout">
+								<div class="advocacy-card">
+									<h3>Albinism Advocacy</h3>
+									<p>
+										<a href="https://albinism.org/about-albinism/" target="_blank" rel="noreferrer">Albinism</a>
+										is a rare genetic condition that causes a lack of pigmentation in the eyes and typically
+										the skin and hair. It is usually associated with some degree of visual impairment. Some types of albinism,
+										particularly Hermansky-Pudlak Syndrome, are associated with additional health complications.
+									</p>
+									<p>
+										Around the world, people with albinism face a range of human rights challenges.
+										I have visited the United Nations in Geneva three times to represent the
+										<a href="https://albinism.org" target="_blank" rel="noreferrer">National Organization of Albinism and Hypopigmentation (NOAH)</a>
+										and the <a href="https://www.hpsnetwork.org" target="_blank" rel="noreferrer">Hermansky-Pudlak Syndrome (HPS) Network</a>.
+										A recording of one of my statements to the UN Human Rights Council is embedded alongside
+										this section and begins at my remarks. Outside of global advocacy, I am a lifelong member
+										of NOAH and have also enjoyed connecting with the
+										<a href="https://www.albinism.org.uk" target="_blank" rel="noreferrer">Albinism Fellowship of the UK and Ireland</a>
+										since moving to Cambridge.
+									</p>
+								</div>
+								<div class="advocacy-card">
+									<h3>Statement to the UN Human Rights Council</h3>
+									<div class="video-frame">
+										<iframe
+											src="https://cdnapisec.kaltura.com/p/2503451/embedPlaykitJs/uiconf_id/49754663?iframeembed=true&amp;entry_id=1_aib5oyyg&amp;config%5Bplayback%5D=%7B%22startTime%22%3A9185%7D"
+											title="Sarah Kane's statement to the United Nations Human Rights Council"
+											loading="lazy"
+											allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+											referrerpolicy="strict-origin-when-cross-origin"
+											allowfullscreen
+										></iframe>
+									</div>
+									<p class="video-fallback">
+										<a href="https://webtv.un.org/en/asset/k1a/k1aib5oyyg?kalturaStartTime=9185" target="_blank" rel="noreferrer">
+											Open the statement on UN Web TV
+										</a>
+									</p>
+								</div>
 							</div>
 						</div>
 					</section>
