@@ -450,15 +450,26 @@
 									<details class="publication-abstract">
 										<summary>Abstract</summary>
 										<p>
-											Europium traces rare nucleosynthetic events such as neutron-star mergers,
-											but GALAH DR4 reports less precise europium measurements than earlier
-											releases. We train a convolutional neural network to transfer GALAH DR3
-											[Eu/H] labels onto DR4 spectra and publish predictions for 118,946 stars,
-											including a high-confidence sample of 54,068 giants. We supplement the
-											catalogue with synthesis-based abundances for metal-poor stars. Combined
-											with GALAH DR3, the results provide more than 100,000 vetted abundances on
-											a consistent scale and recover established trends in Galactic chemical
-											evolution.
+											The rapid neutron-capture (<i>r</i>-process) element europium (Eu) is a valuable tracer
+											of neutron star mergers and other rare nucleosynthetic events. The stellar spectroscopic
+											survey GALAH's unique wavelength range and setup include the Eu absorption feature at
+											&sim;6645 &Aring; for almost a million stars in the most recent Data Release 4 (DR4).
+											However, DR4 also saw a decreased precision in reported Eu measurements compared to
+											previous data releases. In this work, we use a convolutional neural network (CNN) to
+											perform label transfer, wherein we use the GALAH DR4 spectra and stellar parameters to
+											infer DR3 [Eu/H] abundances. This CNN is then applied to DR4 spectra without corresponding
+											DR3 Eu abundances to develop a new, publicly available catalogue of [Eu/H] values for high
+											signal-to-noise targets. We include [Eu/H] predictions for 118,946 stars, out of which
+											54,068 giants constitute our "golden sample" of high-confidence predictions, which pass
+											stricter quality cuts and have a reported precision &lesssim;0.1. To overcome the scarcity
+											of training data in the low metallicity regime, we provide an additional catalogue of
+											[Eu/H] abundances for metal poor ([Fe/H] &lt; -1) stars derived from synthesis of the Eu
+											feature. Our "golden sample" can be combined with [Eu/H] values from GALAH DR3 to create a
+											catalogue of over 100,000 vetted, high-quality abundances on a homogeneous scale. Moreover,
+											we are able to reproduce known science results, including the elevated Eu abundances of
+											accreted stars and previously observed Galactic chemical evolution trends. This catalogue
+											represents one of the largest available samples of [Eu/H] abundances for high
+											signal-to-noise targets.
 										</p>
 									</details>
 								</article>
@@ -473,15 +484,25 @@
 									<details class="publication-abstract">
 										<summary>Abstract</summary>
 										<p>
-											Nitrogen-enhanced field stars preserve chemical evidence of globular
-											cluster origins after escaping their birth environments. We compare their
-											integrals of motion and metallicities with those of surviving clusters and
-											chemically typical halo stars. Relative to the full halo, these stars are
-											more strongly associated with initially massive clusters in the inner
-											Galaxy. That excess largely disappears when the comparison sample is
-											matched in orbital energy, suggesting that many low-energy inner-halo stars
-											may share cluster origins. Dynamical friction and the Galactic bar further
-											limit reliable present-day star-to-cluster associations.
+											As sites of some of the most efficient star formation in the Universe, globular clusters
+											(GCs) have long been hypothesized to be the building blocks of young galaxies. Within the
+											Milky Way, our best tracers of the contribution of GCs to the proto-Galaxy are stars with
+											such anomalous overabundance in nitrogen and depletion in oxygen ("high-[N/O] stars") that
+											they can be identified as having originated in a cluster long after they have escaped. We
+											identify associations between these high-[N/O] field stars and GCs using integrals of
+											motion and metallicities and compare to chemically typical halo stars to quantify any
+											excess association, enabling a population-level exploration of the formation sites of the
+											nitrogen-enhanced stars in the field. Relative to the halo as a whole, high-[N/O] stars show
+											stronger associations with the most initially massive, inner Galaxy GCs, suggesting that
+											many nitrogen-rich stars formed in these environments. However, when compared to a sample
+											matched in orbital energy, the excess largely disappears: high-[N/O] stars are, on average,
+											no more associated with surviving GCs than energy-matched halo stars, despite their [N/O]
+											abundances indicating GC origins, consistent with a scenario in which a substantial
+											fraction of low-energy inner-halo stars originate in GCs, so an energy-matched control
+											dilutes any differential excess. We argue that associations between high-[N/O] stars and
+											their parent GCs are further weakened because dynamical friction and the Galactic bar have
+											altered integrals of motion, limiting the reliability of precise present-day associations
+											and, especially, individual star-to-cluster tagging.
 										</p>
 									</details>
 								</article>
@@ -495,15 +516,24 @@
 									<details class="publication-abstract">
 										<summary>Abstract</summary>
 										<p>
-											Stars with unusually high nitrogen and aluminium abundances can trace
-											globular clusters even after those stars enter the Galactic field. We train
-											a neural network on low-resolution Gaia BP/RP spectra to identify this rare
-											chemical signature. The classifier reaches approximately 99 per cent
-											accuracy with a false-positive rate near 7 per cent and identifies 878 new
-											candidates. Validation tests show that candidates occur more frequently in
-											clusters than in the field. Most lie in the inner Galaxy, while their field
-											frequency declines near [Fe/H] = -1, around the completion of Galactic
-											disc spin-up.
+											Globular clusters (GCs) are sites of extremely efficient star formation, and recent
+											studies suggest they significantly contributed to the early Milky Way's stellar mass
+											build-up. Although their role has since diminished, GCs' impact on the Galaxy's initial
+											evolution can be traced today by identifying their most chemically unique
+											stars&mdash;those with anomalous nitrogen and aluminum overabundances and oxygen depletion.
+											While they are a perfect tracer of clusters, be it intact or fully dissolved, these
+											high-[N/O], high-[Al/Fe] GC-origin stars are extremely rare within the current Galaxy. To
+											address the scarcity of these unusual, precious former GC members, we train a neural
+											network (NN) to identify high-[N/O], high-[Al/Fe] stars using low-resolution Gaia BP/RP
+											spectra. Our NN achieves a classification accuracy of approximately &asymp;99% and a false
+											positive rate of around &asymp;7%, identifying 878 new candidates in the Galactic field.
+											We validate our results with several physically-motivated sanity checks, showing, for
+											example, that the incidence of selected stars in Galactic GCs is significantly higher than
+											in the field. Moreover, we find that most of our GC-origin candidates reside in the inner
+											Galaxy, having likely formed in the proto-Milky Way, consistent with previous research. The
+											fraction of GC candidates in the field drops at a metallicity of [Fe/H] &asymp; -1,
+											approximately coinciding with the completion of spin-up, i.e. the formation of the Galactic
+											stellar disk.
 										</p>
 									</details>
 								</article>
@@ -519,16 +549,17 @@
 									<details class="publication-abstract">
 										<summary>Abstract</summary>
 										<p>
-											Astronomy communication has historically prioritized visual presentation,
-											limiting access for blind and low-vision audiences and overlooking other
-											ways of understanding scientific information. We presented sonifications of
-											three NASA astronomical objects to blind, low-vision, and sighted
-											participants, then surveyed responses related to learning, enjoyment, and
-											trust. Across 3,184 participants, both audience groups reported learning
-											gains and positive experiences. The findings indicate that multisensory
-											astronomy can expand access, strengthen engagement with scientific data, and
-											increase awareness of accessibility among both sighted and blind or
-											low-vision communities.
+											Historically, astronomy has prioritized visuals to present information, with scientists
+											and communicators overlooking the critical need to communicate astrophysics with blind or
+											low-vision audiences and provide novel channels for sighted audiences to process scientific
+											information. This study sonified NASA data of three astronomical objects presented as aural
+											visualizations, then surveyed blind or low-vision and sighted individuals to elicit feedback
+											on the experience of these pieces as it relates to enjoyment, education, and trust of the
+											scientific data. Data analyses from 3,184 sighted or blind or low-vision survey participants
+											yielded significant self-reported learning gains and positive experiential responses.
+											Results showed that astrophysical data engaging multiple senses could establish additional
+											avenues of trust, increase access, and promote awareness of accessibility in sighted and
+											blind or low-vision communities.
 										</p>
 									</details>
 								</article>
